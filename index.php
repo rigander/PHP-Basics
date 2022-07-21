@@ -20,13 +20,18 @@
     <h1 class="header">Welcome to my training php project!</h1>
     <!-- Заголовок -->
     <!-- Область основного контента -->
+      <blockquote style="font-size: 20px;">
+          <?php
+            echo strftime('Today is: %d-%m-%Y');
+          ?>
+      </blockquote>
     <h3 class="small-head">Why to learn?</h3>
     <p>
         It helps us break out of our normal patterns of behaviour. It gives our brains something to think about other than our daily worries. It might be a mere temporary distraction but it shows our mind and body that thinking about something other than stressful things is possible and desirable.
     </p>
     <h3 class="small-head">What is PHP?</h3>
     <p>
-        PHP is an open-source server-side scripting language that many devs use for web development. It is also a general-purpose language that you can use to make lots of projects, including Graphical User Interfaces (GUIs).
+        PHP - is an open-source server-side scripting language that many devs use for web development. It is also a general-purpose language that you can use to make lots of projects, including Graphical User Interfaces (GUIs).
     </p>
     <p>
         The abbreviation PHP initially stood for Personal Homepage. But now it is a recursive acronym for Hypertext Preprocessor. (It's recursive in the sense that the first word itself is an abbreviation, so the full meaning doesn't follow the abbreviation.)
