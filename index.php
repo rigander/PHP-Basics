@@ -1,3 +1,10 @@
+<?php
+setlocale(LC_ALL, "russian");
+$year = strftime('%Y');
+$month = strftime('%B');
+$month = iconv("windows-1251", "UTF-8", $month);
+$day = strftime('%d');
+?>
 <!DOCTYPE html>
 <html>
 
@@ -18,12 +25,20 @@
   <div id="content">
     <!-- Заголовок -->
     <h1 class="header">Welcome to my training php project!</h1>
-    <!-- Заголовок -->
-    <!-- Область основного контента -->
+      <?
+      $time = date("H");
+      $welcome = "";
+      if ($time >= 0 && $time < 6){
+          $welcome = "Good Night!";
+      }elseif ($time >= 6 && $time < 12){
+          $welcome = "Good Morning!";
+      }elseif ($time >= 12 && $time < 18){
+          $welcome = "Good Day!";
+      }else echo $welcome = "Good Evening!";
+      ?>
+      <h2 style="color:#1e3cd2;"><?= $welcome ?></h2>
       <blockquote style="font-size: 20px;">
-          <?php
-            echo strftime('Today is: %d-%m-%Y');
-          ?>
+          <?= "Today: Date - $day , Month - $month, Year - $year"; ?>
       </blockquote>
     <h3 class="small-head">Why to learn?</h3>
     <p>
@@ -65,7 +80,7 @@
   </div>
   <div id="footer">
     <!-- Нижняя часть страницы -->
-    &copy; Rabbit Master , 2022
+    &copy; Rabbit Master , <?= $year ?>
     <!-- Нижняя часть страницы -->
   </div>
 </body>
