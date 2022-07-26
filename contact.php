@@ -27,11 +27,13 @@
       $result = "";
       switch ($last) {
           case "K":
-              $result = $allNumbers * $kB;
+              $result = $allNumbers * $kB; break;
           case "M":
-              $result = $allNumbers * $mB;
+              $result = $allNumbers * $mB; break;
           case "G":
-              $result = $allNumbers * $gB;
+              $result = $allNumbers * $gB; break;
+          default:
+              $result = $allNumbers; break;
       }
       ?>
     <h3>Address</h3>
