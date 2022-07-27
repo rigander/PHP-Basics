@@ -63,16 +63,25 @@ $day = strftime('%d');
     <!-- Навигация -->
     <h2>Navigation Menu</h2>
     <!-- Меню -->
+      <?
+      $leftMenu = [
+              ['link'=>'Home', 'href'=>'index.php'],
+              ['link'=>'About me', 'href'=>'about.php'],
+              ['link'=>'Contact', 'href'=>'contact.php'],
+              ['link'=>'Multiplication table', 'href'=>'table.php'],
+              ['link'=>'Calculator', 'href'=>'calc.php']
+      ];
+      ?>
     <ul>
-      <li><a href='index.php'>Home</a>
+      <li><a href=<?= $leftMenu[0]['href'] ?>><?= $leftMenu[0]['link'] ?></a>
       </li>
-      <li><a href='about.php'>About me</a>
+      <li><a href=<?= $leftMenu[1]['href'] ?>><?= $leftMenu[1]['link'] ?></a>
       </li>
-      <li><a href='contact.php'>Contacts</a>
+      <li><a href=<?= $leftMenu[2]['href'] ?>><?= $leftMenu[2]['link'] ?></a>
       </li>
-      <li><a href='table.php'>Multiplication table</a>
+      <li><a href=<?= $leftMenu[3]['href'] ?>><?= $leftMenu[3]['link'] ?></a>
       </li>
-      <li><a href='calc.php'>Calculator</a>
+      <li><a href=<?= $leftMenu[4]['href'] ?>><?= $leftMenu[4]['link'] ?></a>
       </li>
     </ul>
     <!-- Меню -->

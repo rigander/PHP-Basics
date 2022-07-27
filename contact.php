@@ -47,6 +47,43 @@
       </button>
     </form>
     <p id="data">Data send - max volume <?= $result ?> byte.</p>
+      <?
+      $user = ["John ", "70", "male", "football", true, false];
+      echo $user[0];
+      $user[] = "children ";
+      $user[22] = "best-player";
+      echo $user[4];
+      echo count($user);
+      ?>
+      <br>
+      <br>
+      <?
+      print_r($user);
+      ?>
+      <br>
+      <br>
+      <?
+      var_dump($user);
+      ?>
+      <br>
+      <br>
+      <?
+      $arr = [1=>"Andrew", 5=>"Bosch", "registered", 25, true, false ];
+      unset ($arr[5]);
+      var_dump($arr);
+      ?>
+      <br>
+      <br>
+      <?
+      $dataList = [
+              "name" => "George",
+              "login"=> "odinson",
+              "password"=> "1245",
+              "age"=> "90",
+                true
+      ];
+      echo $dataList["name"];
+      ?>
   </div>
   <br>
   <br>
