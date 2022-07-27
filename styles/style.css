@@ -28,7 +28,6 @@ body {
   margin-right: 2em;
   margin-top: 0.5em;
 }
-
 #header .logo {
   float: left;
   width: 187px;
@@ -42,7 +41,6 @@ body {
   left: 1em;
   width: 14em;
 }
-
 #nav ul {
   list-style: none;
   margin-left: 1.5em;
@@ -95,8 +93,7 @@ h3 {
 ol li {
   font-size: 90%;
 }
-
-#content p,
+#content,
 form {
   font-size: 100%;
   line-height: 1.6em;
@@ -114,8 +111,4 @@ form {
   color: #2A4F6F;
   background-color: transparent;
   font-size: 20px;
-}
-
-#contact-body{
-  font-family: "Segoe UI";
 }
