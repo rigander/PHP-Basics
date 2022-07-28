@@ -4,100 +4,82 @@
 <head>
   <title>Таблица умножения</title>
   <meta charset="utf-8" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles/table.css" />
 </head>
+<header>
 
+</header>
 <body>
 
   <div id="header">
     <!-- Верхняя часть страницы -->
-    <img src="logo.gif" width="187" height="29" alt="Наш логотип" class="logo" />
-    <span class="slogan">приходите к нам учиться</span>
+      <img src="Rabbit.png" alt="Наш логотип" class="logo" />
+      <span class="slogan">Amor Vincit Omnia</span>
     <!-- Верхняя часть страницы -->
   </div>
 
   <div id="content">
     <!-- Заголовок -->
-    <h1>Таблица умножения</h1>
+    <h1>Multiplication table</h1>
     <!-- Заголовок -->
     <!-- Область основного контента -->
-    <form action=''>
-      <label>Количество колонок: </label>
+    <form name="form" action='' method="get">
+      <label>Amount of columns: </label>
       <br />
       <input name='cols' type='text' value="" />
       <br />
-      <label>Количество строк: </label>
+      <label>Amount of rows: </label>
       <br />
       <input name='rows' type='text' value="" />
       <br />
-      <label>Цвет: </label>
+      <label>Color: </label>
       <br />
       <input name='color' type='text' value="" />
       <br />
-      <br />
-      <input type='submit' value='Создать' />
+      <input id="create-button" type='submit' value='Создать' />
     </form>
+      <br />
     <!-- Таблица -->
-    <table border='1' width="200">
-      <tr>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>4</td>
-        <td>6</td>
-        <td>8</td>
-        <td>10</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>6</td>
-        <td>9</td>
-        <td>12</td>
-        <td>15</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>8</td>
-        <td>12</td>
-        <td>16</td>
-        <td>10</td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>10</td>
-        <td>15</td>
-        <td>20</td>
-        <td>25</td>
-      </tr>
-    </table>
+      <table>
+      <?
+      $cols = $_GET['cols'];
+      $rows = $_GET['rows'];
+      $color = $_GET['color'];
+      for ( $row = 1; $row <= $rows ; $row++){
+          echo'<tr>';
+          for ( $col = 1; $col <= $cols; $col++){
+              $res = $col * $row;
+              echo '<td style="border: 1px solid black; color: '.$color.
+                  ';' . 'width: 40px; height: 20px; text-align: center;">',
+              $res, '</td>';
+          }
+          echo '</tr>';
+      }
+      ?>
+      </table>
     <!-- Таблица -->
     <!-- Область основного контента -->
   </div>
   <div id="nav">
-    <h2>Навигация по сайту</h2>
+    <h2>Navigation Menu</h2>
     <!-- Меню -->
     <ul>
-      <li><a href='index.php'>Домой</a>
+      <li><a href='index.php'>Home</a>
       </li>
-      <li><a href='about.php'>О нас</a>
+      <li><a href='about.php'>About me</a>
       </li>
-      <li><a href='contact.php'>Контакты</a>
+      <li><a href='contact.php'>Contacts</a>
       </li>
-      <li><a href='table.php'>Таблица умножения</a>
+      <li><a href='table.php'>Multiplication table</a>
       </li>
-      <li><a href='calc.php'>Калькулятор</a>
+      <li><a href='calc.php'>Calculator</a>
       </li>
     </ul>
     <!-- Меню -->
   </div>
   <div id="footer">
     <!-- Нижняя часть страницы -->
-    &copy; Супер Мега Веб-мастер, 2000 &ndash; 2015
+    &copy; Rabbit Master, 2022
     <!-- Нижняя часть страницы -->
   </div>
 </body>
