@@ -143,6 +143,12 @@ TEXT;
             echo $rom{$i++}, '<br/>';
         }
         ?>
+        <?
+        $i = 100;
+        do {
+            echo $i++;
+        } while ($i <= 10 );
+        ?>
     </div>
 </div>
 
