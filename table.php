@@ -65,6 +65,26 @@
       ?>
     <!-- Таблица -->
     <!-- Область основного контента -->
+      <br>
+      <div style="margin-left: 20px; font-size: 20px;">
+          <?
+          $arr = [
+                  'a' => 'one',
+                  'b' => 'two',
+                  'c' => 'three'
+          ];
+          foreach ($arr as $v){
+              echo $v."\n";
+          };
+
+          echo "</br>";
+
+          foreach ($arr as $k => $v){
+              echo "</br>" . "$k : $v\n";
+          }
+
+          ?>
+      </div>
   </div>
   <div id="nav">
     <h2>Navigation Menu</h2>

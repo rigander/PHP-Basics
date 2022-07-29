@@ -4,6 +4,16 @@ $year = strftime('%Y');
 $month = strftime('%B');
 $month = iconv("windows-1251", "UTF-8", $month);
 $day = strftime('%d');
+
+//Инициализация массива
+$leftMenu = [
+    ['link' => 'Home', 'href' => 'index.php'],
+    ['link' => 'About me', 'href' => 'about.php'],
+    ['link' => 'Contact', 'href' => 'contact.php'],
+    ['link' => 'Multiplication table', 'href' => 'table.php'],
+    ['link' => 'Calculator', 'href' => 'calc.php']
+];
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -61,29 +71,16 @@ $day = strftime('%d');
   </div>
   <div id="nav">
     <!-- Навигация -->
-    <h2>Navigation Menu</h2>
+    <h2 style="margin-left: 10px;">Navigation Menu</h2>
     <!-- Меню -->
-      <?
-      $leftMenu = [
-              ['link'=>'Home', 'href'=>'index.php'],
-              ['link'=>'About me', 'href'=>'about.php'],
-              ['link'=>'Contact', 'href'=>'contact.php'],
-              ['link'=>'Multiplication table', 'href'=>'table.php'],
-              ['link'=>'Calculator', 'href'=>'calc.php']
-      ];
-      ?>
-    <ul>
-      <li><a href=<?= $leftMenu[0]['href'] ?>><?= $leftMenu[0]['link'] ?></a>
-      </li>
-      <li><a href=<?= $leftMenu[1]['href'] ?>><?= $leftMenu[1]['link'] ?></a>
-      </li>
-      <li><a href=<?= $leftMenu[2]['href'] ?>><?= $leftMenu[2]['link'] ?></a>
-      </li>
-      <li><a href=<?= $leftMenu[3]['href'] ?>><?= $leftMenu[3]['link'] ?></a>
-      </li>
-      <li><a href=<?= $leftMenu[4]['href'] ?>><?= $leftMenu[4]['link'] ?></a>
-      </li>
-    </ul>
+    <?
+    echo '<ul style="font-weight:bold;">';
+    foreach ($leftMenu as $val){
+        echo ' <li><a href='. $val["href"] .'>'. $val["link"] . '</a>
+          </li>';
+    }
+    echo '</ul>';
+    ?>
     <!-- Меню -->
     <!-- Навигация -->
   </div>
