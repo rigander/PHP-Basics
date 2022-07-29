@@ -76,8 +76,7 @@ $leftMenu = [
     <?
     echo '<ul style="font-weight:bold;">';
     foreach ($leftMenu as $val){
-        echo ' <li><a href='. $val["href"] .'>'. $val["link"] . '</a>
-          </li>';
+        echo "<li><a href='{$val["href"]}'>{$val["link"]}</a></li>";
     }
     echo '</ul>';
     ?>
