@@ -22,9 +22,10 @@ function drawMenu($leftMenu, $vertical = true){
          }
          echo '</ul>';
      } if (!$vertical) {
+         $style = " ' color: green;'";
          echo '<ul style="font-weight:bold; ">';
          foreach ($leftMenu as $val) {
-             echo "<li style='padding-top: 10px;'><a style=' color: green;' href='{$val["href"]}'>{$val["link"]}</a></li>";
+             echo "<li style='padding-top: 10px;'><a style= {$style} href='{$val["href"]}'>{$val["link"]}</a></li>";
          }
          echo '</ul>';
      }
