@@ -149,6 +149,21 @@ TEXT;
             echo $i++;
         } while ($i <= 10 );
         ?>
+<!--        Функции-->
+        <?
+        function say_hello($name) {
+            echo "<h3 style='margin: 0; color: indianred;'>Hello great & marvelous $name!!!</h3>";
+        }
+        say_hello("Mike");
+        $name = "John";
+        say_hello($name);
+        $newName = "say_hello";
+        $newName("Karl");
+        function say_my_name($name = "Haizenberg"){
+            echo "Your name is $name!";
+        }
+        say_my_name();
+        ?>
     </div>
 </div>
 
