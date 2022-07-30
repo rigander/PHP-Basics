@@ -14,6 +14,22 @@ $leftMenu = [
     ['link' => 'Calculator', 'href' => 'calc.php']
 ];
 
+function drawMenu($leftMenu, $vertical = true){
+     if ($vertical){
+         echo '<ul style="font-weight:bold;">';
+         foreach ($leftMenu as $val) {
+             echo "<li><a href='{$val["href"]}'>{$val["link"]}</a></li>";
+         }
+         echo '</ul>';
+     } if (!$vertical) {
+         echo '<ul style="font-weight:bold; ">';
+         foreach ($leftMenu as $val) {
+             echo "<li style='padding-top: 10px;'><a style=' color: green;' href='{$val["href"]}'>{$val["link"]}</a></li>";
+         }
+         echo '</ul>';
+     }
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -73,13 +89,9 @@ $leftMenu = [
     <!-- Навигация -->
     <h2 style="margin-left: 10px;">Navigation Menu</h2>
     <!-- Меню -->
-    <?
-    echo '<ul style="font-weight:bold;">';
-    foreach ($leftMenu as $val){
-        echo "<li><a href='{$val["href"]}'>{$val["link"]}</a></li>";
-    }
-    echo '</ul>';
-    ?>
+      <?
+      drawMenu($leftMenu, false);
+      ?>
     <!-- Меню -->
     <!-- Навигация -->
   </div>
