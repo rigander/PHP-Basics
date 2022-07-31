@@ -31,6 +31,15 @@ function drawMenu($leftMenu, $vertical = true){
      }
 }
 
+function area_of_disk($r){
+    return 3.14 * $r * $r;
+}
+
+function area_of_ring($big, $small){
+    $b = area_of_disk($big);
+    $s = area_of_disk($small);
+    return $b - $s;
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -84,6 +93,12 @@ function drawMenu($leftMenu, $vertical = true){
 
         PHP is mostly used for making web servers. It runs on the browser and is also capable of running in the command line. So, if you don't feel like showing your code output in the browser, you can show it in the terminal.
     </p>
+      <?
+      echo area_of_disk(5);
+      echo "<br/><div style='color:blue; font-weight:bold; font-size: 21px;'>";
+      echo area_of_ring(11,9);
+      echo "</div>";
+      ?>
     <!-- Область основного контента -->
   </div>
   <div id="nav">
