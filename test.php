@@ -164,6 +164,19 @@ TEXT;
         }
         say_my_name();
         ?>
+        <br>
+<!--         Подключение файла-->
+<!--        1 способ-->
+        <br>
+        <?
+        include "test.inc.php"
+        ?>
+        <br>
+<!--        2 способ-->
+        <br>
+        <?
+        require "test.inc.php"
+        ?>
     </div>
 </div>
 

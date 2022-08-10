@@ -1,0 +1,1 @@
+&copy; Rabbit Master , <?= $year ?>
