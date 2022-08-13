@@ -1,16 +1,6 @@
 <h1 class="header">Welcome to my training php project!</h1>
-<?
-$time = date("H");
-$welcome = "";
-if ($time >= 0 && $time < 6){
-    $welcome = "Good Night!";
-}elseif ($time >= 6 && $time < 12){
-    $welcome = "Good Morning!";
-}elseif ($time >= 12 && $time < 18){
-    $welcome = "Good Day!";
-}else echo $welcome = "Good Evening!";
-?>
-<h2 style="color:#1e3cd2;"><?= $welcome ?></h2>
+
+
 <blockquote style="font-size: 20px;">
     <?= "Today: Date - $day , Month - $month, Year - $year"; ?>
 </blockquote>
@@ -31,34 +21,5 @@ if ($time >= 0 && $time < 6){
 
     PHP is mostly used for making web servers. It runs on the browser and is also capable of running in the command line. So, if you don't feel like showing your code output in the browser, you can show it in the terminal.
 </p>
-<?
-echo area_of_disk(5);
-echo "<br/><div style='color:blue; font-weight:bold; font-size: 21px;'>";
-echo area_of_ring(11,9);
-echo "</div>";
-?>
-<br>
-<?
-$A = "Michaels";
-echo strlen($A);
-echo "<br/>";
-echo log(3);
-echo "<br/>";
-// Выводим первую букву строки в верхнем регистре
-$s = "hello";
-$s{0} = strtoupper($s{0});
-echo $s{0};
-echo "<br/>";
-// более простой способ, при помощи специальной функции
-echo ucfirst($s{0});
-echo "<br/>";
-// Проверяем была ли установлена переменная значением, отличным от null
-$varity = " ";
-var_dump(isset($varity));
-echo "<br/>";
-// Вызвать метку указанной даты в параметрах даты
-$dt = mktime(0, 0, 0, 2, 15, 1978);
-echo $dt;
-echo "<br/>";
-print_r(getdate($dt));
-?>
+
+

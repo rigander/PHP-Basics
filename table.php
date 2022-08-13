@@ -1,93 +1,81 @@
-<!DOCTYPE html>
-<html>
+<?php
+require "inc/lib.inc.php";
+set_error_handler("myError");
+require  "inc/data.inc.php";
 
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $cols = abs((int) $_POST['cols']);
+    $rows = abs((int) $_POST['rows']);
+    $color = trim(strip_tags($_POST['color']));
+}
+$cols = ($cols) ?: 10;
+$rows = ($rows) ?: 10;
+$color = ($color) ?: 'yellow';
+?>
+<!DOCTYPE html>
+
+<html>
 <head>
-  <title>Таблица умножения</title>
-  <meta charset="utf-8" />
-  <link rel="stylesheet" href="styles/table.css" />
+    <title>Таблица умножения</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles/table.css" />
 </head>
 <header>
-
 </header>
 <body>
 
-  <div id="header">
+<div id="header">
     <!-- Верхняя часть страницы -->
-      <img src="Rabbit.png" alt="Наш логотип" class="logo" />
-      <span class="slogan">Amor Vincit Omnia</span>
+    <img src="Rabbit.png" alt="Наш логотип" class="logo" />
+    <span class="slogan">Amor Vincit Omnia</span>
     <!-- Верхняя часть страницы -->
-  </div>
-
-  <div id="content">
+</div>
+<div id="content">
     <!-- Заголовок -->
     <h1>Multiplication table</h1>
     <!-- Заголовок -->
     <!-- Область основного контента -->
-    <form name="form" action='' method="get">
+    <form name="form" action='' method="post">
       <label>Amount of columns: </label>
       <br />
-      <input name='cols' type='text' value="" />
+      <input name='cols' id="cols" type='text' value="" />
       <br />
       <label>Amount of rows: </label>
       <br />
-      <input name='rows' type='text' value="" />
+      <input name='rows' id='rows' text' value="" />
       <br />
       <label>Color: </label>
       <br />
-      <input name='color' type='text' value="" />
+      <input name='color' id="color" type='text' value="" />
       <br />
-      <input id="create-button" type='submit' value='Создать' />
+      <input id="create-button" name="button1" type='submit' value='Создать'" />
     </form>
       <br />
     <!-- Таблица -->
       <?
-      drawTable();
+          drawTable($cols, $rows, $color);
       ?>
+    <div id="footer">
+        <!-- Нижняя часть страницы -->
+        <?
+        require_once "inc/bottom.inc.php";
+        ?>
+        <!-- Нижняя часть страницы -->
+    </div>
     <!-- Таблица -->
     <!-- Область основного контента -->
-      <br>
-      <div style="margin-left: 20px; font-size: 20px;">
-          <?
-          $arr = [
-                  'a' => 'one',
-                  'b' => 'two',
-                  'c' => 'three'
-          ];
-          foreach ($arr as $v){
-              echo $v."\n";
-          };
+<div>
+    <div id="nav">
+        <!-- Навигация -->
+        <?
+        require_once "inc/menu.inc.php";
+        ?>
+        <!-- Навигация -->
+    </div>
 
-          echo "</br>";
+</div>
 
-          foreach ($arr as $k => $v){
-              echo "</br>" . "$k : $v\n";
-          }
-
-          ?>
-      </div>
-  </div>
-  <div id="nav">
-    <h2>Navigation Menu</h2>
-    <!-- Меню -->
-    <ul>
-      <li><a href='index.php'>Home</a>
-      </li>
-      <li><a href='about.php'>About me</a>
-      </li>
-      <li><a href='contact.php'>Contacts</a>
-      </li>
-      <li><a href='table.php'>Multiplication table</a>
-      </li>
-      <li><a href='calc.php'>Calculator</a>
-      </li>
-    </ul>
-    <!-- Меню -->
-  </div>
-  <div id="footer">
-    <!-- Нижняя часть страницы -->
-    &copy; Rabbit Master, 2022
-    <!-- Нижняя часть страницы -->
-  </div>
 </body>
 
 </html>
+

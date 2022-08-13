@@ -104,11 +104,12 @@ form {
 }
 #footer {
   clear: both;
+  width: 200px;
   text-align: center;
   border-top: 1px dotted #B2BCC6;
   margin-top: 320px;
   font: 100% Georgia, "Times New Roman", Times, serif;
   color: #2A4F6F;
   background-color: transparent;
-  font-size: 20px;
+  font-size: 50px;
 }
