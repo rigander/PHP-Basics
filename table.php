@@ -55,13 +55,7 @@ $color = ($color) ?: 'yellow';
       <?
           drawTable($cols, $rows, $color);
       ?>
-    <div id="footer">
-        <!-- Нижняя часть страницы -->
-        <?
-        require_once "inc/bottom.inc.php";
-        ?>
-        <!-- Нижняя часть страницы -->
-    </div>
+
     <!-- Таблица -->
     <!-- Область основного контента -->
 <div>
@@ -74,7 +68,13 @@ $color = ($color) ?: 'yellow';
     </div>
 
 </div>
-
+    <div id="footer">
+        <!-- Нижняя часть страницы -->
+        <?
+        require_once "inc/bottom.inc.php";
+        ?>
+        <!-- Нижняя часть страницы -->
+    </div>
 </body>
 
 </html>

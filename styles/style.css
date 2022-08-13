@@ -111,5 +111,8 @@ form {
   font: 100% Georgia, "Times New Roman", Times, serif;
   color: #2A4F6F;
   background-color: transparent;
-  font-size: 50px;
+  font-size: 22px;
+}
+.calculator{
+  margin: auto 33%;
 }

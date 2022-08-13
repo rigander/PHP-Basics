@@ -7,10 +7,10 @@ $day = strftime('%d');
 
 $leftMenu = [
     ['link' => 'Home', 'href' => 'index.php?'],
-    ['link' => 'About me', 'href' => 'index.php?id=about'],
-    ['link' => 'Contact', 'href' => 'index.php?=contact'],
-    ['link' => 'Multiplication table', 'href' => 'index.php?=table'],
-    ['link' => 'Calculator', 'href' => 'index.php?=calc']
+    ['link' => 'About me', 'href' => 'about.php'],
+    ['link' => 'Contact', 'href' => 'contact.php'],
+    ['link' => 'Multiplication table', 'href' => 'table.php'],
+    ['link' => 'Calculator', 'href' => 'calc.php']
 ];
 
 $time = date("H");
